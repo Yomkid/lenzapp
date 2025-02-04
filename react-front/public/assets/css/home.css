@@ -1,0 +1,475 @@
+/* Links */
+a {
+    text-decoration: none !important;
+}
+
+/* Brand Partners */
+.brand-partners {
+    background-color: #f7f9fa;
+}
+
+.brand-partners-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.brand-partners-content {
+    padding: 3rem;
+    width: 100%;
+    /* background-color: #ffa938; */
+}
+
+.brand-partners-content-heading {
+    color: #6a6f73;
+    font-weight: 400;
+    margin-bottom: 1rem;
+    font-size: 1.2rem;
+    max-width: 100%;
+}
+
+.brand-partners-logos-list {
+    display: grid;
+    grid-auto-flow: column;
+    justify-content: space-between;
+    align-self: normal;
+}
+
+.brand-partners-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.brand-partners-list-item {
+    justify-self: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+img, picture {
+    max-width: 100%;
+    height: auto;
+    vertical-align: middle;
+}
+
+/* Topic Pagination Container */
+.topic-pagination-container {
+    padding: 1rem;
+    border: 1px solid #000;
+    position: relative;
+}
+
+.courses-container {
+    display: flex;
+    flex-wrap: nowrap; /* Prevents wrapping */
+    overflow-x: auto;
+    scroll-snap-type: x mandatory; /* Makes scrolling smoother */
+    -webkit-overflow-scrolling: touch; /* Enable smooth scrolling on iOS */
+}
+
+
+
+
+/* Course Cards Container */
+.courses-container {
+    display: flex;
+    overflow-x: auto;
+    padding: 10px;
+    scroll-behavior: smooth;
+    -webkit-overflow-scrolling: touch;
+    /* gap: 0.2rem; */
+    position: relative;
+}
+
+.courses-container::-webkit-scrollbar {
+    display: none; /* Hide scrollbar */
+}
+
+/* General Course Card Styles */
+.course-card-homepage {
+    flex: 0 0 100%; /* Full width for mobile by default */
+    min-width: 100%;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    transition: transform 0.2s, box-shadow 0.2s;
+    margin-right: 10px; /* Space between the cards */
+}
+
+.course-card-homepage img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+}
+.course-card-homepage .card-body {
+    padding: 0;
+}
+
+/* Hover Effects */
+.course-card-homepage:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+.course-card-homepage .card-title {
+    font-size: 1rem;
+    margin: 0.5rem 0;
+    color: #333;
+}
+
+/* Mobile Responsive Behavior */
+@media (max-width: 767px) {
+    .course-card-homepage {
+        flex: 0 0 calc(100% - 70px); /* Show 1 full card and part of the next on small screens */
+        min-width: calc(100% - 70px);
+    }
+}
+
+/* Tablet Responsive Behavior */
+@media (min-width: 768px) {
+    .course-card-homepage {
+        flex: 0 0 calc(33.33% - 10px); /* 3 cards per row on tablets */
+        min-width: calc(33.33% - 10px);
+    }
+}
+
+/* Desktop Responsive Behavior */
+@media (min-width: 992px) {
+    .course-card-homepage {
+        flex: 0 0 calc(25% - 30px); /* 4 cards per row on desktops */
+        min-width: calc(25% - 30px);
+    }
+}
+
+
+
+
+
+/* Scroll Button Styling */
+.scroll-button {
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+.scroll-button i {
+    color: #333;
+    font-size: 40px;
+    font-weight: 700;
+}
+
+
+
+/* Scroll Buttons for Card Scrolling */
+.scroll-buttonc {
+    position: absolute;
+    /* top: 50%; */
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    border: none;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    z-index: 10;
+}
+
+/* Left button - align on the left border, closer to the container */
+.scroll-buttonc.left {
+    left: -10px; /* Adjust closer to the container */
+}
+
+/* Right button - align on the right border, closer to the container */
+.scroll-buttonc.right {
+    right: -10px; /* Adjust closer to the container */
+}
+
+/* Add hover effect for better UX */
+.scroll-buttonc:hover {
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+/* Ensure the scroll buttons are hidden initially if necessary */
+.scroll-buttonc {
+    display: flex; /* Buttons will be displayed initially */
+}
+
+#leftScrollButton, #rightScrollButton {
+    display: flex; /* By default, the buttons are visible */
+}
+
+
+
+.button-container {
+    overflow: hidden;
+    white-space: nowrap;
+    width: 100%;
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.button-flex {
+    display: flex;
+    align-items: center;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    -webkit-overflow-scrolling: touch;
+}
+
+.button-flex::-webkit-scrollbar {
+    display: none; /* Hide scrollbar */
+}
+
+/* Custom Button */
+.btn-custom {
+    margin: 0.5rem;
+    background-color: lightgray;
+    color: black;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    white-space: nowrap;
+    flex: 0 0 auto;
+}
+
+.btn-custom.active {
+    background-color: #007bff;
+    color: white;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Course Rating */
+.course-rating {
+    display: flex;
+    align-items: center;
+    margin: 0.5rem 0;
+}
+
+.rating {
+    font-size: 1rem;
+    color: #f39c12;
+    margin-right: 0.5rem;
+}
+
+.rating-count {
+    font-size: 0.9rem;
+    color: #777;
+    margin-left: 0.5rem;
+}
+
+.course-price {
+    font-size: 1.1rem;
+    color: #e74c3c;
+    font-weight: bold;
+}
+
+/* Popular Categories */
+.popular-categories {
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+/* Responsive Design Adjustments */
+@media (max-width: 1200px) {
+    .course-card-homepage {
+        width: calc(25% - 1rem); /* 4 cards per row */
+    }
+
+    .btn-custom {
+        padding: 8px 16px;
+    }
+}
+
+@media (max-width: 992px) {
+    .course-card-homepage {
+        width: calc(33.33% - 1rem); /* 3 cards per row */
+    }
+
+    .btn-custom {
+        padding: 6px 14px;
+    }
+
+    .popular-categories {
+        font-size: 1.4rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .course-card-homepage {
+        width: calc(50% - 1rem); /* 2 cards per row */
+    }
+
+    .btn-custom {
+        padding: 5px 12px;
+        font-size: 0.9rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .course-card-homepage {
+        width: 100%; /* 1 card per row */
+    }
+
+    .btn-custom {
+        padding: 4px 10px;
+        font-size: 0.8rem;
+    }
+
+    .scroll-button {
+        display: none; /* Hide scroll buttons on small screens */
+    }
+}
+
+
+
+
+
+
+/* Basic styling for the course listing */
+.course-listing {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    padding: 1rem;
+}
+
+/* Individual course item */
+.course-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 1rem;
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 1rem;
+}
+
+/* Course image */
+.course-image {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 4px;
+}
+
+/* Course details */
+.course-details {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+/* Title, instructor, and rating */
+.course-title {
+    font-size: 1rem;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+}
+
+.course-instructor {
+    color: #666;
+    font-size: 0.9rem;
+    margin-bottom: 0.5rem;
+}
+
+.course-rating {
+    font-size: 0.9rem;
+    margin-bottom: 0.5rem;
+}
+
+.rating {
+    font-weight: bold;
+    color: #f0a500;
+}
+
+.stars {
+    color: #f0a500;
+}
+
+.review-count {
+    color: #666;
+}
+
+/* Meta information (hours, lectures, level) */
+.course-meta {
+    color: #666;
+    font-size: 0.9rem;
+    margin-bottom: 0.5rem;
+}
+
+/* Price */
+.course-price {
+    font-size: 1rem;
+    font-weight: bold;
+    color: #000;
+}
+
+/* Responsive behavior */
+@media (min-width: 768px) {
+    .course-listing {
+        flex-direction: column;
+    }
+
+    .course-item {
+        flex-direction: row;
+        align-items: flex-start;
+    }
+
+    .course-image {
+        width: 120px;
+        height: 120px;
+    }
+}
+
+@media (min-width: 992px) {
+    .course-listing {
+        max-width: 960px;
+        margin: 0 auto;
+    }
+
+    .course-item {
+        align-items: flex-start;
+    }
+}
+
+
+
+.category-card {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    transition: transform 0.3s;
+    background-color: #F7F9FA;
+    border-radius: none;
+    color: #2D2F31;
+}
+
+.category-card:hover {
+    transform: translateY(-10px);
+}
+
+
+

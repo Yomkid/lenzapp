@@ -1,0 +1,43 @@
+/* Base styles for the navbar */
+.navbar {
+    z-index: 1050;
+    padding: 0.5rem 1rem;
+}
+
+/* Mobile view adjustments */
+@media (max-width: 992px) {
+    .navbar {
+        height: auto;
+    }
+    .navbar-toggler {
+        padding: 0.25rem 0.75rem;
+        margin: 0;
+        height: auto;
+    }
+    .navbar-collapse {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 250px;
+        height: 100%;
+        background-color: #f8f9fa;
+        box-shadow: 2px 0 5px rgba(0, 0, 0, 0.5);
+        transition: transform 0.3s ease-in-out;
+        z-index: 1000;
+        padding: 0.5rem 1rem;
+    }
+}
+
+@media (min-width: 992px) {
+    .navbar-collapse {
+        position: static;
+        width: auto;
+        height: auto;
+        background-color: transparent;
+        box-shadow: none;
+        display: flex !important;
+    }
+    .navbar-collapse.show {
+        left: auto;
+    }
+}
